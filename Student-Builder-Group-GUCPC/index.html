@@ -47,39 +47,43 @@
 
 <main>
   <!-- HERO -->
-  <section class="hero">
-    <!-- Animated Cloud Background Overlay -->
-    <div class="hero-bg-clouds" aria-hidden="true">
-      <div class="cloud-node cloud-1">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+ <section class="cloud-hero-container">
+  <!-- Dynamic Background Grid & Ambient Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="cyber-grid" aria-hidden="true"></div>
+
+  <!-- Main 3D Floating Node Card -->
+  <div class="cloud-card" tabindex="0">
+    <div class="card-border-glow" aria-hidden="true"></div>
+    
+    <div class="card-header">
+      <div class="cloud-icon-wrapper">
+        <svg class="cloud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1564 20.206 10.2312 17.9001 10.0235C17.4093 6.58826 14.464 3.9 10.85 3.9C7.8188 3.9 5.25052 5.72778 4.23869 8.35824C2.38605 8.94827 1 10.6865 1 12.8C1 15.3957 3.10426 17.5 5.7 17.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 12V21M12 12L9 15M12 12L15 15" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
-      <div class="cloud-node cloud-2">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-      </div>
-      <div class="cloud-node cloud-3">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-      </div>
-      <div class="cloud-ring"></div>
+      <span class="status-badge"><span class="pulse-dot"></span> Active Region</span>
     </div>
 
-    <div class="container hero-inner">
-      <p class="eyebrow reveal">Now open at GUCPC</p>
-      <h1 class="hero-title reveal">
-        <span class="gradient-text">Student Builder</span><br />
-        Group
-      </h1>
-      <p class="hero-sub reveal"></p>
-      <p class="hero-tagline reveal">Empowering the next generation of student developers</p>
-      <p class="hero-desc reveal">
-        Join a community of builders, tinkerers, and problem-solvers. Learn together,
-        ship real projects, and grow into the engineer you're becoming.
-      </p>
-      <div class="hero-actions reveal">
-        <a href="contact.html" class="btn btn-primary">Join Our Group</a>
-        <a href="about.html" class="btn btn-ghost">Learn More</a>
+    <div class="card-body">
+      <h3 class="card-title">Cloud Infrastructure</h3>
+      <p class="card-description">High-availability multi-region mesh network with edge routing & automated failover protocols.</p>
+    </div>
+
+    <div class="card-footer">
+      <div class="metric">
+        <span class="label">Uptime</span>
+        <span class="value">99.99%</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric">
+        <span class="label">Latency</span>
+        <span class="value">&lt; 12ms</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- STATS -->
   <section class="stats-strip reveal">
