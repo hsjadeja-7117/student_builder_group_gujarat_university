@@ -47,44 +47,43 @@
 
 <main>
   <!-- HERO -->
-<section class="hero-section">
-  <!-- Background Ambient Effects -->
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
+<section class="cloud-hero-container">
+  <!-- Dynamic Background Grid & Ambient Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="cyber-grid" aria-hidden="true"></div>
 
-  <!-- Hero Content -->
-  <div class="hero-content">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      <span>GUCPC Campus Chapter</span>
+  <!-- Main 3D Floating Node Card -->
+  <div class="cloud-card" tabindex="0">
+    <div class="card-border-glow" aria-hidden="true"></div>
+    
+    <div class="card-header">
+      <div class="cloud-icon-wrapper">
+        <svg class="cloud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1564 20.206 10.2312 17.9001 10.0235C17.4093 6.58826 14.464 3.9 10.85 3.9C7.8188 3.9 5.25052 5.72778 4.23869 8.35824C2.38605 8.94827 1 10.6865 1 12.8C1 15.3957 3.10426 17.5 5.7 17.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 12V21M12 12L9 15M12 12L15 15" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="status-badge"><span class="pulse-dot"></span> Active Region</span>
     </div>
 
-    <h1 class="hero-title">
-      Build, Deploy & Scale <br />
-      <span class="gradient-text">In The Cloud</span>
-    </h1>
+    <div class="card-body">
+      <h3 class="card-title">Cloud Infrastructure</h3>
+      <p class="card-description">High-availability multi-region mesh network with edge routing & automated failover protocols.</p>
+    </div>
 
-    <p class="hero-description">
-      Empowering student developers to master cloud infrastructure, modern DevOps, 
-      and real-world production systems.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#events" class="btn-primary">Explore Events</a>
-      <a href="#about" class="btn-secondary">Join Community</a>
+    <div class="card-footer">
+      <div class="metric">
+        <span class="label">Uptime</span>
+        <span class="value">99.99%</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric">
+        <span class="label">Latency</span>
+        <span class="value">&lt; 12ms</span>
+      </div>
     </div>
   </div>
 </section>
-  <!-- STATS -->
-  <section class="stats-strip reveal">
-    <div class="container stats-grid">
-      <div class="stat"><span class="stat-num" data-count="120">0</span><span class="stat-label">Members</span></div>
-      <div class="stat"><span class="stat-num" data-count="18">0</span><span class="stat-label">Events run</span></div>
-      <div class="stat"><span class="stat-num" data-count="24">0</span><span class="stat-label">Projects shipped</span></div>
-      <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Core teams</span></div>
-    </div>
-  </section>
-
   <hr class="divider container" />
 
   <!-- ABOUT PREVIEW -->
