@@ -1,207 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Student Builder Group — GUCPC</title>
-<meta name="description" content="Student Builder Group at GUCPC — a student community for building, learning, and shipping real projects together." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Builder Group — GUCPC</title>
+  <meta name="description"
+    content="Student Builder Group at GUCPC — a student community for building, learning, and shipping real projects together." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-<header class="nav">
-  <div class="container">
-    <div class="nav-brand-left">
-      <div class="logo-badge">GUCPC</div>
-      <div class="logo-text">
-        <strong>GUCPC</strong>
-        <span>Campus Chapter</span>
-      </div>
-    </div>
-
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/team">Team</a>
-      <a href="/events">Events</a>
-      <a href="/contact">Contact Us</a>
-    </nav>
-
-    <div class="nav-brand-right">
-      <div class="logo-text">
-        <strong>Student Builder Group</strong>
-        <span>SBG</span>
-      </div>
-      <div class="logo-badge">SBG</div>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-decor" aria-hidden="true">
-      <div class="decor-item decor-cloud" style="--top:8%; --left:5%; --dur:6s; --delay:0s;">
-        <svg viewBox="0 0 64 40" width="34" height="22">
-          <path d="M18 30c-6 0-11-4.6-11-10.3 0-5.2 4.1-9.5 9.4-10.2C18 4.3 23 1 28.7 1c6.6 0 12.2 4.4 13.7 10.4 5.6.7 9.9 5.3 9.9 10.8 0 6-5 10.8-11.3 10.8H18z"/>
-        </svg>
-      </div>
-
-      <div class="decor-item decor-hex" style="--top:12%; --right:6%; --dur:7.5s; --delay:0.4s;">
-        <svg viewBox="0 0 60 60" width="30" height="30">
-          <polygon points="30,3 54,16.5 54,43.5 30,57 6,43.5 6,16.5" fill="none" stroke="currentColor" stroke-width="3"/>
-          <circle cx="30" cy="30" r="4" fill="currentColor"/>
-        </svg>
-      </div>
-
-      <div class="decor-item decor-bolt" style="--top:44%; --left:3%; --dur:5.5s; --delay:0.8s;">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <polygon points="13,1 4,14 10,14 8,23 20,9 13,9 15,1"/>
-        </svg>
-      </div>
-
-      <div class="decor-item decor-server" style="--top:40%; --right:3%; --dur:6.8s; --delay:0.2s;">
-        <svg viewBox="0 0 40 40" width="28" height="28">
-          <rect x="4" y="5" width="32" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.4"/>
-          <rect x="4" y="16.5" width="32" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.4"/>
-          <rect x="4" y="28" width="32" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.4"/>
-          <circle cx="10" cy="9.5" r="1.6" fill="currentColor"/>
-          <circle cx="10" cy="21" r="1.6" fill="currentColor"/>
-          <circle cx="10" cy="32.5" r="1.6" fill="currentColor"/>
-        </svg>
-      </div>
-
-      <div class="decor-item decor-gear" style="--top:74%; --right:14%; --dur:14s; --delay:0s;">
-        <svg viewBox="0 0 40 40" width="30" height="30">
-          <g fill="currentColor">
-            <rect x="18" y="0" width="4" height="9" rx="1.5"/>
-            <rect x="18" y="31" width="4" height="9" rx="1.5"/>
-            <rect x="18" y="0" width="4" height="9" rx="1.5" transform="rotate(45 20 20)"/>
-            <rect x="18" y="31" width="4" height="9" rx="1.5" transform="rotate(45 20 20)"/>
-            <rect x="18" y="0" width="4" height="9" rx="1.5" transform="rotate(90 20 20)"/>
-            <rect x="18" y="31" width="4" height="9" rx="1.5" transform="rotate(90 20 20)"/>
-            <rect x="18" y="0" width="4" height="9" rx="1.5" transform="rotate(135 20 20)"/>
-            <rect x="18" y="31" width="4" height="9" rx="1.5" transform="rotate(135 20 20)"/>
-          </g>
-          <circle cx="20" cy="20" r="9.5" fill="none" stroke="currentColor" stroke-width="2.4"/>
-          <circle cx="20" cy="20" r="3.4" fill="currentColor"/>
-        </svg>
-      </div>
-
-      <div class="decor-item decor-terminal" style="--top:70%; --left:6%; --dur:7s; --delay:0.6s;">
-        <svg viewBox="0 0 44 32" width="34" height="24">
-          <rect x="1.5" y="1.5" width="41" height="29" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/>
-          <path d="M7 10l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="19" y1="22" x2="30" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" class="decor-cursor"/>
-        </svg>
-      </div>
-    </div>
-
-    <div class="container hero-inner">
-      <p class="eyebrow reveal">Now open at GUCPC</p>
-      <h1 class="hero-title reveal">
-        <span class="gradient-text">Student Builder</span><br />
-        Group
-      </h1>
-      <p class="hero-sub reveal">GUCPC Chapter</p>
-      <p class="hero-tagline reveal">Empowering the next generation of student developers</p>
-      <p class="hero-desc reveal">
-        Join a community of builders, tinkerers, and problem-solvers. Learn together,
-        ship real projects, and grow into the engineer you're becoming.
-      </p>
-      <div class="hero-actions reveal">
-        <a href="/contact" class="btn btn-primary">Join Our Group</a>
-        <a href="/about" class="btn btn-ghost">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats-strip reveal">
-    <div class="container stats-grid">
-      <div class="stat"><span class="stat-num" data-count="120">0</span><span class="stat-label">Members</span></div>
-      <div class="stat"><span class="stat-num" data-count="18">0</span><span class="stat-label">Events run</span></div>
-      <div class="stat"><span class="stat-num" data-count="24">0</span><span class="stat-label">Projects shipped</span></div>
-      <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Core teams</span></div>
-    </div>
-  </section>
-
-  <hr class="divider container" />
-
-  <!-- ABOUT PREVIEW -->
-  <section class="section about-preview">
-    <div class="container about-preview-grid">
-      <div class="reveal">
-        <p class="eyebrow">Who we are</p>
-        <h2>A campus community built around making, not just learning</h2>
-        <p class="about-preview-text">
-          Student Builder Group brings together students who'd rather build something real than
-          just read about it. We run workshops, ship projects, host speaker sessions, and back
-          every member with mentorship from a hands-on core team — right here at GUCPC.
-        </p>
-        <a href="/about" class="btn btn-ghost">More about us</a>
-      </div>
-      <ul class="value-list reveal">
-        <li><span class="value-index">Build</span>Ship real, working projects — not just tutorials.</li>
-        <li><span class="value-index">Learn</span>Workshops and speaker sessions led by people who do this daily.</li>
-        <li><span class="value-index">Belong</span>A community that mentors, supports, and grows together.</li>
-      </ul>
-    </div>
-  </section>
-
-  <hr class="divider container" />
-
-  <!-- UPCOMING EVENTS PREVIEW -->
-  <section class="section events-preview">
+  <header class="nav">
     <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">What's coming up</p>
-        <h2>Upcoming events</h2>
-        <p>Workshops, build nights, and talks — all open to every member.</p>
+      <div class="nav-brand-left">
+        <div class="logo-badge"><img src=".\assets\cpclogo.png" alt="cpclogo"></div>
+        <div class="logo-text">
+          <strong>GUCPC</strong>
+          <span>Campus Chapter</span>
+        </div>
       </div>
-      <div id="home-events-grid" class="events-preview-grid"></div>
-      <div class="events-preview-cta reveal">
-        <a href="/events" class="btn btn-primary">View all events</a>
-      </div>
-    </div>
-  </section>
-</main>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <div class="logo-text">
-        <strong>Student Builder Group</strong>
-        <span>GUCPC Chapter</span>
-      </div>
-      <p>A student-run community for building, learning, and growing together — hosted at GUCPC.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Explore</h4>
-      <a href="/about">About</a>
-      <a href="/team">Team</a>
-      <a href="/events">Events</a>
-      <a href="/contact">Contact Us</a>
-    </div>
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>&copy; <span id="year"></span> Student Builder Group, GUCPC.</span>
-    <span>Built by students, for students.</span>
-  </div>
-</footer>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
 
-<script src="js/main.js"></script>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/team">Team</a>
+        <a href="/events">Events</a>
+        <a href="/contact">Contact Us</a>
+      </nav>
+
+      <div class="nav-brand-right">
+        <div class="logo-text">
+          <strong>Student Builder Group</strong>
+          <span>SBG</span>
+        </div>
+        <div class="logo-badge">
+          <div>
+            <img src=".\assets\SBGlogo.png" alt="SBGlogo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-decor" aria-hidden="true">
+        <div class="decor-item decor-cloud" style="--top:8%; --left:5%; --dur:6s; --delay:0s;">
+          <svg viewBox="0 0 64 40" width="34" height="22">
+            <path
+              d="M18 30c-6 0-11-4.6-11-10.3 0-5.2 4.1-9.5 9.4-10.2C18 4.3 23 1 28.7 1c6.6 0 12.2 4.4 13.7 10.4 5.6.7 9.9 5.3 9.9 10.8 0 6-5 10.8-11.3 10.8H18z" />
+          </svg>
+        </div>
+
+        <div class="decor-item decor-hex" style="--top:12%; --right:6%; --dur:7.5s; --delay:0.4s;">
+          <svg viewBox="0 0 60 60" width="30" height="30">
+            <polygon points="30,3 54,16.5 54,43.5 30,57 6,43.5 6,16.5" fill="none" stroke="currentColor"
+              stroke-width="3" />
+            <circle cx="30" cy="30" r="4" fill="currentColor" />
+          </svg>
+        </div>
+
+        <div class="decor-item decor-bolt" style="--top:44%; --left:3%; --dur:5.5s; --delay:0.8s;">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <polygon points="13,1 4,14 10,14 8,23 20,9 13,9 15,1" />
+          </svg>
+        </div>
+
+        <div class="decor-item decor-server" style="--top:40%; --right:3%; --dur:6.8s; --delay:0.2s;">
+          <svg viewBox="0 0 40 40" width="28" height="28">
+            <rect x="4" y="5" width="32" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.4" />
+            <rect x="4" y="16.5" width="32" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.4" />
+            <rect x="4" y="28" width="32" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.4" />
+            <circle cx="10" cy="9.5" r="1.6" fill="currentColor" />
+            <circle cx="10" cy="21" r="1.6" fill="currentColor" />
+            <circle cx="10" cy="32.5" r="1.6" fill="currentColor" />
+          </svg>
+        </div>
+
+        <div class="decor-item decor-gear" style="--top:74%; --right:14%; --dur:14s; --delay:0s;">
+          <svg viewBox="0 0 40 40" width="30" height="30">
+            <g fill="currentColor">
+              <rect x="18" y="0" width="4" height="9" rx="1.5" />
+              <rect x="18" y="31" width="4" height="9" rx="1.5" />
+              <rect x="18" y="0" width="4" height="9" rx="1.5" transform="rotate(45 20 20)" />
+              <rect x="18" y="31" width="4" height="9" rx="1.5" transform="rotate(45 20 20)" />
+              <rect x="18" y="0" width="4" height="9" rx="1.5" transform="rotate(90 20 20)" />
+              <rect x="18" y="31" width="4" height="9" rx="1.5" transform="rotate(90 20 20)" />
+              <rect x="18" y="0" width="4" height="9" rx="1.5" transform="rotate(135 20 20)" />
+              <rect x="18" y="31" width="4" height="9" rx="1.5" transform="rotate(135 20 20)" />
+            </g>
+            <circle cx="20" cy="20" r="9.5" fill="none" stroke="currentColor" stroke-width="2.4" />
+            <circle cx="20" cy="20" r="3.4" fill="currentColor" />
+          </svg>
+        </div>
+
+        <div class="decor-item decor-terminal" style="--top:70%; --left:6%; --dur:7s; --delay:0.6s;">
+          <svg viewBox="0 0 44 32" width="34" height="24">
+            <rect x="1.5" y="1.5" width="41" height="29" rx="4" fill="none" stroke="currentColor" stroke-width="2.2" />
+            <path d="M7 10l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <line x1="19" y1="22" x2="30" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              class="decor-cursor" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">Now open at GUCPC</p>
+        <h1 class="hero-title reveal">
+          <span class="gradient-text">Student Builder</span><br />
+          Group
+        </h1>
+        <p class="hero-sub reveal">GUCPC Chapter</p>
+        <p class="hero-tagline reveal">Empowering the next generation of student developers</p>
+        <p class="hero-desc reveal">
+          Join a community of builders, tinkerers, and problem-solvers. Learn together,
+          ship real projects, and grow into the engineer you're becoming.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="/contact" class="btn btn-primary">Join Our Group</a>
+          <a href="/about" class="btn btn-ghost">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-strip reveal">
+      <div class="container stats-grid">
+        <div class="stat"><span class="stat-num" data-count="120">0</span><span class="stat-label">Members</span></div>
+        <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Core teams</span></div>
+      </div>
+    </section>
+
+    <hr class="divider container" />
+
+    <!-- ABOUT PREVIEW -->
+    <section class="section about-preview">
+      <div class="container about-preview-grid">
+        <div class="reveal">
+          <p class="eyebrow">Who we are</p>
+          <h2>A campus community built around making, not just learning</h2>
+          <p class="about-preview-text">
+            Student Builder Group brings together students who'd rather build something real than
+            just read about it. We run workshops, ship projects, host speaker sessions, and back
+            every member with mentorship from a hands-on core team — right here at GUCPC.
+          </p>
+          <a href="/about" class="btn btn-ghost">More about us</a>
+        </div>
+        <ul class="value-list reveal">
+          <li><span class="value-index">Build</span>Ship real, working projects — not just tutorials.</li>
+          <li><span class="value-index">Learn</span>Workshops and speaker sessions led by people who do this daily.</li>
+          <li><span class="value-index">Belong</span>A community that mentors, supports, and grows together.</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="divider container" />
+
+    <!-- UPCOMING EVENTS PREVIEW -->
+    <section class="section events-preview">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">What's coming up</p>
+          <h2>Upcoming events</h2>
+          <p>Workshops, build nights, and talks — all open to every member.</p>
+        </div>
+        <div id="home-events-grid" class="events-preview-grid"></div>
+        <div class="events-preview-cta reveal">
+          <a href="/events" class="btn btn-primary">View all events</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text">
+          <strong>Student Builder Group</strong>
+          <span>GUCPC Chapter</span>
+        </div>
+        <p>A student-run community for building, learning, and growing together — hosted at GUCPC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/about">About</a>
+        <a href="/team">Team</a>
+        <a href="/events">Events</a>
+        <a href="/contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; <span id="year"></span> Student Builder Group, GUCPC.</span>
+      <span>Built by students, for students.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
