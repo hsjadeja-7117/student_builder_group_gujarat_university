@@ -1,3 +1,154 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Builder Group — GUCPC</title>
+<meta name="description" content="Student Builder Group at GUCPC — a student community for building, learning, and shipping real projects together." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <div class="nav-brand-left">
+      <div class="logo-badge">GUCPC</div>
+      <div class="logo-text">
+        <strong>GUCPC</strong>
+        <span>Campus Chapter</span>
+      </div>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="team.html">Team</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="nav-brand-right">
+      <div class="logo-text">
+        <strong>Student Builder Group</strong>
+        <span>SBG</span>
+      </div>
+      <div class="logo-badge">SBG</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">Now open at GUCPC</p>
+      <h1 class="hero-title reveal">
+        <span class="gradient-text">Student Builder</span><br />
+        Group
+      </h1>
+      <p class="hero-sub reveal"></p>
+      <p class="hero-tagline reveal">Empowering the next generation of student developers</p>
+      <p class="hero-desc reveal">
+        Join a community of builders, tinkerers, and problem-solvers. Learn together,
+        ship real projects, and grow into the engineer you're becoming.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="contact.html" class="btn btn-primary">Join Our Group</a>
+        <a href="about.html" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-strip reveal">
+    <div class="container stats-grid">
+      <div class="stat"><span class="stat-num" data-count="120">0</span><span class="stat-label">Members</span></div>
+      <div class="stat"><span class="stat-num" data-count="18">0</span><span class="stat-label">Events run</span></div>
+      <div class="stat"><span class="stat-num" data-count="24">0</span><span class="stat-label">Projects shipped</span></div>
+      <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Core teams</span></div>
+    </div>
+  </section>
+
+  <hr class="divider container" />
+
+  <!-- ABOUT PREVIEW -->
+  <section class="section about-preview">
+    <div class="container about-preview-grid">
+      <div class="reveal">
+        <p class="eyebrow">Who we are</p>
+        <h2>A campus community built around making, not just learning</h2>
+        <p class="about-preview-text">
+          Student Builder Group brings together students who'd rather build something real than
+          just read about it. We run workshops, ship projects, host speaker sessions, and back
+          every member with mentorship from a hands-on core team — right here at GUCPC.
+        </p>
+        <a href="about.html" class="btn btn-ghost">More about us</a>
+      </div>
+      <ul class="value-list reveal">
+        <li><span class="value-index">Build</span>Ship real, working projects — not just tutorials.</li>
+        <li><span class="value-index">Learn</span>Workshops and speaker sessions led by people who do this daily.</li>
+        <li><span class="value-index">Belong</span>A community that mentors, supports, and grows together.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider container" />
+
+  <!-- UPCOMING EVENTS PREVIEW -->
+  <section class="section events-preview">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What's coming up</p>
+        <h2>Upcoming events</h2>
+        <p>Workshops, build nights, and talks — all open to every member.</p>
+      </div>
+      <div id="home-events-grid" class="events-preview-grid"></div>
+      <div class="events-preview-cta reveal">
+        <a href="events.html" class="btn btn-primary">View all events</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">
+        <strong>Student Builder Group</strong>
+        <span>GUCPC Chapter</span>
+      </div>
+      <p>A student-run community for building, learning, and growing together — hosted at GUCPC.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="about.html">About</a>
+      <a href="team.html">Team</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="year"></span> Student Builder Group, GUCPC.</span>
+    <span>Built by students, for students.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +197,20 @@
 <main>
   <!-- HERO -->
   <section class="hero">
+    <!-- Animated Cloud Background Overlay -->
+    <div class="hero-bg-clouds" aria-hidden="true">
+      <div class="cloud-node cloud-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+      </div>
+      <div class="cloud-node cloud-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+      </div>
+      <div class="cloud-node cloud-3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+      </div>
+      <div class="cloud-ring"></div>
+    </div>
+
     <div class="container hero-inner">
       <p class="eyebrow reveal">Now open at GUCPC</p>
       <h1 class="hero-title reveal">
