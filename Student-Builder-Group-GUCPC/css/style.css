@@ -76,13 +76,8 @@ html {
   }
 }
 
-html {
+html, body {
   max-width: 100%;
-}
-
-body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -518,10 +513,85 @@ button {
 .hero {
   padding: clamp(4rem, 12vw, 8rem) 0 clamp(3rem, 8vw, 5rem);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Hero background decoration ----------
+   A handful of small cloud/dev themed badges drifting gently behind
+   the hero copy — purely decorative, never intercepts clicks. */
+.hero-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.decor-item {
+  position: absolute;
+  top: var(--top, 20%);
+  left: var(--left, auto);
+  right: var(--right, auto);
+  bottom: var(--bottom, auto);
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-hair-strong);
+  color: var(--violet-300);
+  box-shadow: 0 12px 26px -14px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  animation: decorFloat var(--dur, 6s) ease-in-out var(--delay, 0s) infinite;
+}
+
+.decor-hex {
+  border-radius: 999px;
+  color: var(--violet-500);
+}
+
+.decor-gear {
+  animation: decorFloat var(--dur, 6s) ease-in-out var(--delay, 0s) infinite,
+             decorSpin 18s linear infinite;
+}
+
+.decor-cursor {
+  animation: decorBlink 1.1s steps(1) infinite;
+}
+
+@keyframes decorFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes decorSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes decorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .decor-item, .decor-gear, .decor-cursor {
+    animation: none;
+  }
+}
+
+/* keep decorations out of the way on narrow screens where there's
+   no room for them beside the hero copy */
+@media (max-width: 700px) {
+  .hero-decor { display: none; }
 }
 
 .hero-inner {
   max-width: 880px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-title {
