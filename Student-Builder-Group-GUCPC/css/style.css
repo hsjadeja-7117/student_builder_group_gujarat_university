@@ -368,98 +368,246 @@ button {
   .nav-brand-right .logo-text { display: none; }
 }
 
-/* ============================================================
-   Home page — Hero Cloud Overlay Addition
-   ============================================================ */
-
-.hero {
-  position: relative;
-  padding: clamp(4rem, 12vw, 8rem) 0 clamp(3rem, 8vw, 5rem);
-  text-align: center;
-  overflow: hidden; /* Prevents floating cloud elements from leaking out */
+/* ==========================================================================
+   Design Tokens & Variables
+   ========================================================================== */
+:root {
+  --bg-dark: oklch(0.14 0.03 260);
+  --card-bg: oklch(0.20 0.04 260 / 0.45);
+  --card-border: oklch(0.98 0.01 260 / 0.12);
+  --accent-cyan: oklch(0.78 0.18 195);
+  --accent-purple: oklch(0.68 0.22 300);
+  --text-main: oklch(0.98 0.01 260);
+  --text-muted: oklch(0.72 0.03 260);
+  
+  --glass-blur: 20px;
+  --spring-easing: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-inner {
+/* ==========================================================================
+   Container & Ambient Environment
+   ========================================================================== */
+.cloud-hero-container {
   position: relative;
-  z-index: 2; /* Ensures text stays sharply above the cloud graphics */
-  max-width: 880px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+  padding: 2rem;
+  background-color: var(--bg-dark);
+  overflow: hidden;
+  perspective: 1200px; /* 3D Spatial Context */
 }
 
-/* Moving Cloud Background Graphics */
-.hero-bg-clouds {
+/* Soft Volumetric Background Light */
+.ambient-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(
+    circle, 
+    oklch(0.65 0.22 240 / 0.25) 0%, 
+    oklch(0.60 0.25 310 / 0.15) 50%, 
+    transparent 70%
+  );
+  filter: blur(60px);
+  animation: ambientFloat 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.cyber-grid {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  background-image: 
+    linear-gradient(to right, oklch(1 0 0 / 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(1 0 0 / 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
   pointer-events: none;
+}
+
+/* ==========================================================================
+   3D Glassmorphic Cloud Card
+   ========================================================================== */
+.cloud-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 1.75rem;
+  border-radius: 24px;
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  border: 1px solid var(--card-border);
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.5),
+    0 18px 36px -18px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  
+  /* Elevate onto GPU and apply smooth spring transitions */
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+  transition: 
+    transform 0.6s var(--spring-easing),
+    box-shadow 0.6s var(--spring-easing),
+    border-color 0.4s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Hover Micro-Interactions */
+.cloud-card:hover,
+.cloud-card:focus-visible {
+  transform: translateY(-8px) rotateX(4deg) rotateY(-2deg) scale(1.02);
+  border-color: oklch(0.78 0.18 195 / 0.4);
+  box-shadow: 
+    0 40px 80px -15px rgba(0, 0, 0, 0.6),
+    0 0 40px 0 oklch(0.78 0.18 195 / 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Dynamic Gradient Border Light */
+.card-border-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 25px;
+  background: linear-gradient(
+    135deg, 
+    var(--accent-cyan), 
+    transparent 40%, 
+    transparent 60%, 
+    var(--accent-purple)
+  );
+  opacity: 0.2;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  padding: 1px;
+}
+
+.cloud-card:hover .card-border-glow {
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   Card Elements & Typography
+   ========================================================================== */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.cloud-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.35;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: radial-gradient(circle at top left, oklch(0.78 0.18 195 / 0.2), oklch(0.2 0.04 260 / 0.6));
+  border: 1px solid oklch(0.78 0.18 195 / 0.3);
+  color: var(--accent-cyan);
+  box-shadow: 0 8px 16px -4px oklch(0.78 0.18 195 / 0.25);
+  transition: transform 0.5s var(--spring-easing);
 }
 
-.cloud-node {
-  position: absolute;
-  color: var(--violet-500);
-  filter: drop-shadow(0 0 18px var(--violet-glow));
+.cloud-card:hover .cloud-icon-wrapper {
+  transform: translateZ(20px) scale(1.1); /* Pulls icon forward in 3D space */
 }
 
-.cloud-node svg {
-  width: 100%;
-  height: 100%;
+.cloud-icon {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 2px 8px oklch(0.78 0.18 195 / 0.5));
 }
 
-.cloud-1 {
-  width: 140px;
-  height: 140px;
-  top: 15%;
-  left: 10%;
-  animation: floatSlow 14s ease-in-out infinite alternate;
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: oklch(0.85 0.12 160);
+  background: oklch(0.25 0.08 160 / 0.3);
+  border: 1px solid oklch(0.5 0.15 160 / 0.3);
+  border-radius: 99px;
 }
 
-.cloud-2 {
-  width: 190px;
-  height: 190px;
-  bottom: 12%;
-  right: 8%;
-  animation: floatMedium 18s ease-in-out infinite alternate-reverse;
-}
-
-.cloud-3 {
-  width: 110px;
-  height: 110px;
-  top: 22%;
-  right: 18%;
-  animation: floatFast 10s ease-in-out infinite alternate;
-}
-
-/* Pulsing ambient cloud halo directly behind header */
-.cloud-ring {
-  width: 450px;
-  height: 450px;
+.pulse-dot {
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--violet-glow) 0%, transparent 70%);
-  animation: pulseGlow 6s ease-in-out infinite alternate;
+  background-color: oklch(0.75 0.2 160);
+  box-shadow: 0 0 8px oklch(0.75 0.2 160);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Keyframe Animations */
-@keyframes floatSlow {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  100% { transform: translate(35px, -25px) rotate(6deg); }
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
 }
 
-@keyframes floatMedium {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  100% { transform: translate(-45px, 30px) rotate(-8deg); }
+.card-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0 0 1.75rem 0;
 }
 
-@keyframes floatFast {
-  0% { transform: translate(0, 0) scale(0.95); }
-  100% { transform: translate(-20px, -20px) scale(1.08); }
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid oklch(1 0 0 / 0.08);
 }
 
-@keyframes pulseGlow {
-  0% { transform: scale(0.85); opacity: 0.4; }
-  100% { transform: scale(1.15); opacity: 0.8; }
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric .label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric .value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  font-feature-settings: "tnum";
+}
+
+.metric-divider {
+  width: 1px;
+  height: 28px;
+  background: oklch(1 0 0 / 0.08);
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+@keyframes ambientFloat {
+  0% { transform: translate(-10%, -10%) scale(1); }
+  50% { transform: translate(10%, 15%) scale(1.15); }
+  100% { transform: translate(-5%, 5%) scale(0.95); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
 }
 
 /* ---------- Generic page header (About / Team / Events / Contact) ---------- */
