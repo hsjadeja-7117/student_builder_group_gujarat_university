@@ -1,0 +1,111 @@
+/* ============================================================
+   Contact page
+   ============================================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: clamp(1.6rem, 4vw, 2.4rem);
+  border: 1px solid var(--border-hair);
+  border-radius: var(--radius-l);
+  background: var(--bg-glass);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-row label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.85em 1em;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--border-hair);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--dur-fast), background var(--dur-fast);
+  resize: vertical;
+}
+.form-row input:focus,
+.form-row textarea:focus {
+  border-color: var(--violet-500);
+  background: rgba(167, 139, 250, 0.05);
+}
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-submit {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+}
+
+.form-note {
+  font-size: 0.88rem;
+  color: var(--violet-300);
+  min-height: 1.2em;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.info-card {
+  padding: 1.6rem;
+  border: 1px solid var(--border-hair);
+  border-radius: var(--radius-m);
+  transition: border-color var(--dur-fast), transform var(--dur-fast);
+}
+.info-card:hover {
+  border-color: var(--border-hair-strong);
+  transform: translateY(-3px);
+}
+.info-card h3 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--violet-300);
+  margin-bottom: 0.5rem;
+}
+.info-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.social-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+.social-row a {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  border-bottom: 1px solid transparent;
+  transition: color var(--dur-fast), border-color var(--dur-fast);
+}
+.social-row a:hover {
+  color: var(--violet-300);
+  border-color: var(--violet-500);
+}
+
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
