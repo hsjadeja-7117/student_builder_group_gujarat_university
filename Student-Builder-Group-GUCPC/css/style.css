@@ -998,7 +998,7 @@ button {
 
 /* CORE TEAM: exactly 3 per row, fixed width so it's reliably smaller than the leader */
 .team-grid.core-row {
-  grid-template-columns: repeat(3, minmax(0, 250px));
+  grid-template-columns: repeat(3, minmax(0, 300px));
   justify-content: center;
 }
 .team-grid.core-row .team-card {
@@ -1013,7 +1013,7 @@ button {
 
 /* VOLUNTEERS: 4 per row, fixed width, a bit smaller again than core */
 .team-grid.volunteer-row {
-  grid-template-columns: repeat(4, minmax(0, 210px));
+  grid-template-columns: repeat(4, minmax(0, 250px));
   justify-content: center;
 }
 .team-grid.volunteer-row .team-card {
