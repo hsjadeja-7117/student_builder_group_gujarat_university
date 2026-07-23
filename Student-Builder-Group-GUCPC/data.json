@@ -1,5 +1,14 @@
 {
   "team": {
+    "leader": [
+      {
+        "id": "ldr-01",
+        "name": "Add Name",
+        "role": "Leader",
+        "bio": "Drives the strategic vision, leads community growth, and oversees all club initiatives.",
+        "image": "assets/images/leader/leader.jpg"
+      }
+    ],
     "core-team": [
       { "id": "ct-01", "name": "Add Name", "role": "President", "bio": "Leads the club's vision and coordinates every wing of the community.", "image": "assets/images/core-team/president.jpg" },
       { "id": "ct-02", "name": "Add Name", "role": "Vice President", "bio": "Drives partnerships and keeps the club's programs running smoothly.", "image": "assets/images/core-team/vice-president.jpg" },
