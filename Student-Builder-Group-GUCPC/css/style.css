@@ -965,6 +965,83 @@ button {
 @media (max-width: 480px) {
   .team-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Leader / Core Team / Volunteers sizing tiers ----------
+   Add these modifier classes to the .team-grid wrapping each block:
+   - .leader-row      → single leader card, centered, largest
+   - .core-row        → 3 across, slightly smaller than the leader
+   - .volunteer-row   → 4 across, smaller than core but only a bit
+   ------------------------------------------------------------------ */
+
+/* LEADER: one big centered card */
+.team-grid.leader-row {
+  grid-template-columns: minmax(240px, 380px);
+  justify-content: center;
+}
+.team-grid.leader-row .team-card {
+  padding: 2.1rem;
+}
+.team-grid.leader-row .team-card .photo-placeholder {
+  aspect-ratio: 1 / 1;
+  margin-bottom: 1.3rem;
+}
+.team-grid.leader-row .team-card h3 {
+  font-size: 1.3rem;
+}
+.team-grid.leader-row .team-card .role {
+  font-size: 0.9rem;
+}
+.team-grid.leader-row .team-card .bio {
+  font-size: 0.95rem;
+  -webkit-line-clamp: 5;
+}
+
+/* CORE TEAM: exactly 3 per row, a step down from the leader */
+.team-grid.core-row {
+  grid-template-columns: repeat(3, 1fr);
+}
+.team-grid.core-row .team-card {
+  padding: 1.6rem;
+}
+.team-grid.core-row .team-card h3 {
+  font-size: 1.08rem;
+}
+.team-grid.core-row .team-card .bio {
+  font-size: 0.88rem;
+}
+
+/* VOLUNTEERS: 4 per row, only a little smaller than core team */
+.team-grid.volunteer-row {
+  grid-template-columns: repeat(4, 1fr);
+}
+.team-grid.volunteer-row .team-card {
+  padding: 1.3rem;
+}
+.team-grid.volunteer-row .team-card h3 {
+  font-size: 1rem;
+}
+.team-grid.volunteer-row .team-card .role {
+  font-size: 0.78rem;
+}
+.team-grid.volunteer-row .team-card .bio {
+  font-size: 0.82rem;
+  -webkit-line-clamp: 3;
+}
+
+@media (max-width: 980px) {
+  .team-grid.core-row { grid-template-columns: repeat(2, 1fr); }
+  .team-grid.volunteer-row { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .team-grid.volunteer-row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .team-grid.leader-row,
+  .team-grid.core-row,
+  .team-grid.volunteer-row {
+    grid-template-columns: 1fr;
+  }
+}
 /* ============================================================
    Events page — card grid + expand-in-place modal
    ============================================================ */
@@ -982,9 +1059,11 @@ button {
   .events-grid { grid-template-columns: 1fr; }
 }
 
-/* Card — spacious, medium size, fully clickable */
+/* Card — medium size, fully clickable */
 .event-card {
   display: block;
+  max-width: 380px;
+  margin-inline: auto;
   border: 1px solid var(--border-hair);
   border-radius: var(--radius-m);
   background: var(--bg-glass);
@@ -1001,7 +1080,7 @@ button {
 
 .event-card-media {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
 }
 .event-card-media .photo-placeholder {
   border-radius: 0;
@@ -1032,20 +1111,20 @@ button {
 }
 
 .event-card-body {
-  padding: 1.6rem 1.6rem 1.8rem;
+  padding: 1.3rem 1.3rem 1.5rem;
 }
 .event-card-body .tag {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 .event-card-body h3 {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
   line-height: 1.3;
 }
 .event-card-body p {
   color: var(--text-secondary);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .fetch-error {
