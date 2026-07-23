@@ -125,8 +125,8 @@
   stats.forEach((s) => io.observe(s));
 })();
 /* ============================================================
-   Team page: renders core team / volunteers / speakers from
-   data.json, and wires up the category filter tabs.
+   Team page: renders leader / core team / volunteers / speakers
+   from data.json, and wires up the category filter tabs.
    ============================================================ */
 
 (function initTeam() {
@@ -158,6 +158,7 @@
     .then((res) => res.json())
     .then((data) => {
       const team = data.team || {};
+      renderGroup('leader', team['leader']);
       renderGroup('core-team', team['core-team']);
       renderGroup('volunteers', team['volunteers']);
       renderGroup('speakers', team['speakers']);
