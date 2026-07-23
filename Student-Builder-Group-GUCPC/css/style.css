@@ -975,7 +975,7 @@ button {
 
 /* LEADER: one centered card, normal size — just a modest step up from core */
 .team-grid.leader-row {
-  grid-template-columns: minmax(0, 400px);
+  grid-template-columns: minmax(0, 300px);
   justify-content: center;
 }
 .team-grid.leader-row .team-card {
@@ -998,7 +998,7 @@ button {
 
 /* CORE TEAM: exactly 3 per row, fixed width so it's reliably smaller than the leader */
 .team-grid.core-row {
-  grid-template-columns: repeat(3, minmax(0, 300px));
+  grid-template-columns: repeat(3, minmax(0, 250px));
   justify-content: center;
 }
 .team-grid.core-row .team-card {
@@ -1013,7 +1013,7 @@ button {
 
 /* VOLUNTEERS: 4 per row, fixed width, a bit smaller again than core */
 .team-grid.volunteer-row {
-  grid-template-columns: repeat(4, minmax(0, 250px));
+  grid-template-columns: repeat(4, minmax(0, 210px));
   justify-content: center;
 }
 .team-grid.volunteer-row .team-card {
@@ -1362,6 +1362,41 @@ body.modal-open {
 
 @media (max-width: 860px) {
   .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Contact page: map + info stack (form removed) ---------- */
+.contact-stack {
+  max-width: 760px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-map-wrap {
+  width: 100%;
+  height: 340px;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  border: 1px solid var(--border-hair-strong);
+  background: var(--bg-glass);
+}
+.contact-map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .contact-map-wrap { height: 260px; }
+  .contact-info { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
