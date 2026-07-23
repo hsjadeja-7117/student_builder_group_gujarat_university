@@ -1320,9 +1320,10 @@ body.modal-open {
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
+  align-items: stretch;
 }
 .info-card {
   display: flex;
