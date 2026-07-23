@@ -1,105 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Team — Student Builder Group</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-
-<header class="nav">
-  <div class="container">
-    <div class="nav-brand-left">
-      <div class="logo-badge"><img src=".\assets\cpclogo.png" alt="cpclogo"></div>
-      <div class="logo-text"><strong>GUCPC</strong></div>
-    </div>
-    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/team">Team</a>
-      <a href="/events">Events</a>
-      <a href="/contact">Contact Us</a>
-    </nav>
-    <div class="nav-brand-right">
-      <div class="logo-text"><strong>Student Builder Group</strong><span>SBG</span></div>
-      <div class="logo-badge"><img src=".\assets\SBGlogo.png" alt="SBGlogo"></div>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="page-header">
-    <div class="container">
-      <p class="eyebrow">The people</p>
-      <h1>Meet the team</h1>
-      <p>The core team, volunteers, and guest speakers who keep Student Builder Group running.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="team-tabs reveal" role="tablist" aria-label="Team categories">
-        <button class="team-tab active" data-filter="all">All</button>
-        <button class="team-tab" data-filter="core-team">Core Team</button>
-        <button class="team-tab" data-filter="volunteers">Volunteers</button>
-        <button class="team-tab" data-filter="speakers">Speakers</button>
-      </div>
-
-      <div id="team-status" class="team-status">Loading team…</div>
-
-      <div id="core-team" class="team-block">
-        <h2 class="team-block-title">Core team</h2>
-        <div class="team-grid" data-grid="core-team"></div>
-      </div>
-
-      <div id="volunteers" class="team-block">
-        <h2 class="team-block-title">Volunteers</h2>
-        <div class="team-grid" data-grid="volunteers"></div>
-      </div>
-
-      <div id="speakers" class="team-block">
-        <h2 class="team-block-title">Guest speakers</h2>
-        <div class="team-grid" data-grid="speakers"></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <div class="logo-text"><strong>Student Builder Group</strong><span>GUCPC</span></div>
-      <p>A student-run community for building, learning, and growing together — hosted at GUCPC.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Explore</h4>
-      <a href="/about">About</a>
-      <a href="/team">Team</a>
-      <a href="/events">Events</a>
-      <a href="/contact">Contact Us</a>
-    </div>
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Meetup</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>&copy; <span id="year"></span> Student Builder Group, GUCPC.</span>
-    <span>Built by students, for students.</span>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -157,7 +55,7 @@
       <!-- Leader Section -->
       <div id="leader" class="team-block">
         <h2 class="team-block-title">Leader</h2>
-        <div class="team-grid" data-grid="leader">
+        <div class="team-grid leader-row" data-grid="leader">
           <!-- Leader Card Rendered Dynamically or Hardcoded Here -->
         </div>
       </div>
@@ -165,7 +63,7 @@
       <!-- Core Team Section (5 Members) -->
       <div id="core-team" class="team-block">
         <h2 class="team-block-title">Core team</h2>
-        <div class="team-grid" data-grid="core-team">
+        <div class="team-grid core-row" data-grid="core-team">
           <!-- 5 Core Team Member Cards Rendered Dynamically or Hardcoded Here -->
         </div>
       </div>
@@ -173,7 +71,7 @@
       <!-- Volunteers Section (2 Active, Extra Commented Out) -->
       <div id="volunteers" class="team-block">
         <h2 class="team-block-title">Volunteers</h2>
-        <div class="team-grid" data-grid="volunteers">
+        <div class="team-grid volunteer-row" data-grid="volunteers">
           <!-- Active Volunteer 1 -->
           <!-- <div class="team-card">Volunteer 1</div> -->
           
