@@ -975,7 +975,7 @@ button {
 
 /* LEADER: one centered card, normal size — just a modest step up from core */
 .team-grid.leader-row {
-  grid-template-columns: minmax(0, 300px);
+  grid-template-columns: minmax(0, 400px);
   justify-content: center;
 }
 .team-grid.leader-row .team-card {
