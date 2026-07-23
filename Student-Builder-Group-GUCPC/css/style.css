@@ -973,73 +973,75 @@ button {
    - .volunteer-row   → 4 across, smaller than core but only a bit
    ------------------------------------------------------------------ */
 
-/* LEADER: one big centered card */
+/* LEADER: one centered card, normal size — just a modest step up from core */
 .team-grid.leader-row {
-  grid-template-columns: minmax(240px, 380px);
+  grid-template-columns: minmax(0, 300px);
   justify-content: center;
 }
 .team-grid.leader-row .team-card {
-  padding: 2.1rem;
+  padding: 1.7rem;
 }
 .team-grid.leader-row .team-card .photo-placeholder {
   aspect-ratio: 1 / 1;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
 }
 .team-grid.leader-row .team-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
 }
 .team-grid.leader-row .team-card .role {
-  font-size: 0.9rem;
+  font-size: 0.86rem;
 }
 .team-grid.leader-row .team-card .bio {
-  font-size: 0.95rem;
-  -webkit-line-clamp: 5;
+  font-size: 0.9rem;
+  -webkit-line-clamp: 4;
 }
 
-/* CORE TEAM: exactly 3 per row, a step down from the leader */
+/* CORE TEAM: exactly 3 per row, fixed width so it's reliably smaller than the leader */
 .team-grid.core-row {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 250px));
+  justify-content: center;
 }
 .team-grid.core-row .team-card {
-  padding: 1.6rem;
+  padding: 1.4rem;
 }
 .team-grid.core-row .team-card h3 {
-  font-size: 1.08rem;
-}
-.team-grid.core-row .team-card .bio {
-  font-size: 0.88rem;
-}
-
-/* VOLUNTEERS: 4 per row, only a little smaller than core team */
-.team-grid.volunteer-row {
-  grid-template-columns: repeat(4, 1fr);
-}
-.team-grid.volunteer-row .team-card {
-  padding: 1.3rem;
-}
-.team-grid.volunteer-row .team-card h3 {
   font-size: 1rem;
 }
+.team-grid.core-row .team-card .bio {
+  font-size: 0.85rem;
+}
+
+/* VOLUNTEERS: 4 per row, fixed width, a bit smaller again than core */
+.team-grid.volunteer-row {
+  grid-template-columns: repeat(4, minmax(0, 210px));
+  justify-content: center;
+}
+.team-grid.volunteer-row .team-card {
+  padding: 1.15rem;
+}
+.team-grid.volunteer-row .team-card h3 {
+  font-size: 0.92rem;
+}
 .team-grid.volunteer-row .team-card .role {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
 }
 .team-grid.volunteer-row .team-card .bio {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   -webkit-line-clamp: 3;
 }
 
 @media (max-width: 980px) {
-  .team-grid.core-row { grid-template-columns: repeat(2, 1fr); }
-  .team-grid.volunteer-row { grid-template-columns: repeat(3, 1fr); }
+  .team-grid.core-row { grid-template-columns: repeat(2, minmax(0, 250px)); }
+  .team-grid.volunteer-row { grid-template-columns: repeat(3, minmax(0, 210px)); }
 }
 @media (max-width: 700px) {
-  .team-grid.volunteer-row { grid-template-columns: repeat(2, 1fr); }
+  .team-grid.volunteer-row { grid-template-columns: repeat(2, minmax(0, 210px)); }
 }
 @media (max-width: 480px) {
   .team-grid.leader-row,
   .team-grid.core-row,
   .team-grid.volunteer-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 /* ============================================================
