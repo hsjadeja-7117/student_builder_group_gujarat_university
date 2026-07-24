@@ -137,8 +137,7 @@
   function cardHTML(person) {
     return `
       <article class="team-card reveal is-visible">
-        <div class="photo-placeholder">Photo</div>
-        <h3>${person.name}</h3>
+<div class="photo-placeholder"><img src="${evt.image}" alt="${evt.title}"></div>        <h3>${person.name}</h3>
         <p class="role">${person.role}</p>
         <p class="bio">${person.bio}</p>
       </article>`;
