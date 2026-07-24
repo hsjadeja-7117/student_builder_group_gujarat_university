@@ -37,7 +37,7 @@
       "time": "11:00 AM to 1:00 PM IST",
       "location": "Shyama Prasad Mukherjee Auditorium",
       "tag": "Launch",
-      "image": "./assets/aws.png",
+      "image": "assets/aws.png",
       "summary": "AWS SBG Launch Event.",
       "description": "Join us as we officially launch the AWS Student Builder Group at Gujarat University, a student-led community dedicated to learning, building, and growing together through AWS Cloud technologies.This launch event marks the beginning of an exciting journey where students can connect, learn, collaborate, and become part of a vibrant technical community."
     }
