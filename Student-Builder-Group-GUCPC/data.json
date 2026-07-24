@@ -10,7 +10,7 @@
       }
     ],
     "core-team": [
-      { "id": "ct-01", "name": "Harshvardhansinh Jadeja", "role": "Webmaster & Event Coordinator", "bio": "Build and manage the club's official campus website and coordinates every wing of the community.", "image": "assets/images/core-team/president.jpg" },
+      { "id": "ct-01", "name": "Harshvardhansinh Jadeja", "role": "Webmaster & Event Coordinator", "bio": "Build and manage the club's official campus website and coordinates every wing of the community.", "image": "assets/20250109_082134.jpg" },
       { "id": "ct-02", "name": "Herry Patel", "role": "Technical Lead", "bio": "I help in resolving hardware, software, and network issues for the team. I solve technical problems into clear instructions, troubleshoot system faults, and manage IT and system support to maintain operational uptime.", "image": "assets/herry - Herry Seenojiya.jpeg" },
       { "id": "ct-03", "name": "Diya Patel", "role": "Documentation Lead", "bio": "Managing event documentation, organizing reports, and maintaining accurate records to ensure clear, consistent documentation of community activitie.", "image": "assets/132C3F30-3990-4AC4-BC94-6C739D420AAF - DIYA PATEL.png" },
       { "id": "ct-04", "name": "Add Name", "role": "Events Lead", "bio": "Plans and runs every workshop, hackathon, and meetup.", "image": "assets/images/core-team/events-lead.jpg" },
