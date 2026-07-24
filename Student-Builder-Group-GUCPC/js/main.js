@@ -76,7 +76,7 @@
           return `
             <a class="event-card reveal is-visible" href="/events">
               <div class="event-card-media">
-                <div class="photo-placeholder">Photo</div>
+              <div class="photo-placeholder"><img src="${evt.image}" alt="${evt.title}"></div>
                 <span class="event-date-chip"><strong>${day}</strong>${month}</span>
               </div>
               <div class="event-card-body">
