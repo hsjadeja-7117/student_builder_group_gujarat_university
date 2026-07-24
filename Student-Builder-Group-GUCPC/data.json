@@ -32,14 +32,14 @@
   "events": [
     {
       "id": "evt-01",
-      "title": "Cloud Foundations Bootcamp",
-      "date": "2026-08-14",
-      "time": "10:00 AM - 4:00 PM",
-      "location": "GUCPC Seminar Hall",
-      "tag": "Workshop",
-      "image": "assets/images/events/cloud-foundations.jpg",
-      "summary": "A hands-on day covering core cloud concepts and your first deployment.",
-      "description": "Start from zero and leave with a deployed project. This full-day bootcamp walks through compute, storage, and networking fundamentals, followed by a guided lab where every participant ships a small app to the cloud. Laptops and a GitHub account are all you need — the Student Builder Group team handles the rest, from setup to troubleshooting."
+      "title": "AWS Student Builder Group Launch",
+      "date": "2026-07-28",
+      "time": "11:00 AM to 1:00 PM IST",
+      "location": "Shyama Prasad Mukherjee Auditorium",
+      "tag": "Launch",
+      "image": "assets/images/events/aws.png",
+      "summary": "AWS SBG Launch Event.",
+      "description": "Join us as we officially launch the AWS Student Builder Group at Gujarat University, a student-led community dedicated to learning, building, and growing together through AWS Cloud technologies.This launch event marks the beginning of an exciting journey where students can connect, learn, collaborate, and become part of a vibrant technical community."
     }
   ]
 }
