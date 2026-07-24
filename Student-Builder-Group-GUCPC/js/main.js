@@ -203,6 +203,7 @@
     time: document.getElementById('modal-time'),
     location: document.getElementById('modal-location'),
     description: document.getElementById('modal-description'),
+     image: document.getElementById('modal-image'), 
   };
 
   let eventsData = [];
