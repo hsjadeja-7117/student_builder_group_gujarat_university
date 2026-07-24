@@ -11,8 +11,8 @@
     ],
     "core-team": [
       { "id": "ct-01", "name": "Harshvardhansinh Jadeja", "role": "Webmaster & Event Coordinator", "bio": "Build and manage the club's official campus website and coordinates every wing of the community.", "image": "assets/images/core-team/president.jpg" },
-      { "id": "ct-02", "name": "Herry Patel", "role": "Technical Support", "bio": "I help in resolving hardware, software, and network issues for the team. I solve technical problems into clear instructions, troubleshoot system faults, and manage IT and system support to maintain operational uptime.", "image": "assets/images/core-team/vice-president.jpg" },
-      { "id": "ct-03", "name": "Add Name", "role": "Technical Lead", "bio": "Owns the technical roadmap and mentors project teams.", "image": "assets/images/core-team/technical-lead.jpg" },
+      { "id": "ct-02", "name": "Herry Patel", "role": "Technical Lead", "bio": "I help in resolving hardware, software, and network issues for the team. I solve technical problems into clear instructions, troubleshoot system faults, and manage IT and system support to maintain operational uptime.", "image": "assets/images/core-team/vice-president.jpg" },
+      { "id": "ct-03", "name": "Diya Patel", "role": "Documentation Lead", "bio": "Managing event documentation, organizing reports, and maintaining accurate records to ensure clear, consistent documentation of community activitie.", "image": "assets/images/core-team/technical-lead.jpg" },
       { "id": "ct-04", "name": "Add Name", "role": "Events Lead", "bio": "Plans and runs every workshop, hackathon, and meetup.", "image": "assets/images/core-team/events-lead.jpg" },
       { "id": "ct-05", "name": "Add Name", "role": "Design Lead", "bio": "Shapes the visual identity across the club's platforms.", "image": "assets/images/core-team/design-lead.jpg" },
       { "id": "ct-06", "name": "Add Name", "role": "Outreach Lead", "bio": "Builds relationships with sponsors, alumni, and partner communities.", "image": "assets/images/core-team/outreach-lead.jpg" }
