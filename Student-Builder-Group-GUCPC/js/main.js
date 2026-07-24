@@ -76,7 +76,7 @@
           return `
             <a class="event-card reveal is-visible" href="/events">
               <div class="event-card-media">
-              <div class="photo-placeholder"><img src="${evt.image}" alt="${evt.title}"></div>
+                <div class="photo-placeholder"><img src="${evt.image}" alt="${evt.title}"></div>
                 <span class="event-date-chip"><strong>${day}</strong>${month}</span>
               </div>
               <div class="event-card-body">
@@ -137,7 +137,8 @@
   function cardHTML(person) {
     return `
       <article class="team-card reveal is-visible">
-<div class="photo-placeholder"><img src="${evt.image}" alt="${evt.title}"></div>        <h3>${person.name}</h3>
+        <div class="photo-placeholder"><img src="${person.image}" alt="${person.name}"></div>
+        <h3>${person.name}</h3>
         <p class="role">${person.role}</p>
         <p class="bio">${person.bio}</p>
       </article>`;
@@ -202,7 +203,7 @@
     time: document.getElementById('modal-time'),
     location: document.getElementById('modal-location'),
     description: document.getElementById('modal-description'),
-     image: document.getElementById('modal-image'), 
+    image: document.getElementById('modal-image'),
   };
 
   let eventsData = [];
@@ -219,7 +220,7 @@
     return `
       <article class="event-card reveal is-visible" data-id="${evt.id}" tabindex="0" role="button" aria-label="View details for ${evt.title}">
         <div class="event-card-media">
-          <div class="photo-placeholder">Photo</div>
+          <div class="photo-placeholder"><img src="${evt.image}" alt="${evt.title}"></div>
           <span class="event-date-chip"><strong>${day}</strong>${month}</span>
         </div>
         <div class="event-card-body">
@@ -237,6 +238,8 @@
     modalEls.time.textContent = evt.time;
     modalEls.location.textContent = evt.location;
     modalEls.description.textContent = evt.description;
+    modalEls.image.src = evt.image;
+    modalEls.image.alt = evt.title;
 
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
